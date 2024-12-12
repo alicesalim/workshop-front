@@ -1,27 +1,19 @@
-import { useEffect, useState } from 'react'
-import './App.css';
+// src/App.jsx
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home'; 
+import CompletedTasks from './pages/CompletedTasks';  
 
 function App() {
-  const [tasks, setTasks] = useState([]);
-
-  useEffect(() => {
-    const loadData = () => {
-      fetch('http://localhost:8000/api/tasks')
-      .then(response => response.json())
-      .then(data => setTasks(data))
-      }
-      loadData ();
-    }, [])
-
   return (
-    <div className="App">
-      <header className="App-header">
-        {tasks.map(task => (
-          <h1 key={task.id}>{task.name} {task.description} {task.due_to} {task.is_completed}</h1>
-        ))}
-      </header>
-      <h1>teste</h1>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} /> 
+        <Route path="/tasks/completed" element={<CompletedTasks />} />  
+      </Routes>
+    </Router>
   );
 }
 

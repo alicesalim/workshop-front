@@ -1,0 +1,78 @@
+/* Tasks.module.css */
+
+/* Estilos para o contêiner de lista de tarefas */
+.TaskList {
+    padding: 1000px;
+    background-color: #ababab;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow-y: auto;
+    max-height: 600px; /* Para limitar o tamanho da lista se houver muitas tarefas */
+  }
+  
+  /* Estilos para cada tarefa */
+  .TaskList h1 {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #ffffff;
+  }
+  
+  /* Estilo para tarefas completas */
+  .TaskList h1 span.completed {
+    color: green;
+    font-weight: bold;
+  }
+  
+  /* Estilo para tarefas incompletas */
+  .TaskList h1 span.incomplete {
+    color: rgb(141, 44, 44);
+    font-weight: bold;
+  }
+  
+  /* Estilo de responsividade para telas menores */
+  @media (max-width: 768px) {
+    .TaskList {
+      padding: 15px;
+      max-width: 100%;
+    }
+  
+    .TaskList h1 {
+      font-size: 1rem;
+    }
+  }
+/* src/components/Tasks.module.css */
+
+.TaskList {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.TaskItem {
+  background-color: #ffffff;
+  padding: 15px;
+  margin-bottom: 15px;  /* Adiciona o espaço entre as tarefas */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 2rem;
+
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.5rem;
+
+}
+
+p {
+  font-size: 1rem;
+
+}
